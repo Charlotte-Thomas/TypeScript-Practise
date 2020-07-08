@@ -36,3 +36,11 @@ let array2: Array<number> = [1,2,3]
 
 // tuples allow you to state an array of mixed types but fixed number of elements
 let mixed: [string, number] = ['hello', 1]
+
+// enums
+// a way of giving friendly names to a set of numeric values
+
+enum Color {Red = 5, Green, Blue} // auto starts at 0 unless you specify a number (I added 5)
+
+let c: Color = Color.Green
+console.log(c) // = 6
