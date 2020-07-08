@@ -76,3 +76,5 @@ let b = 10 // TS infers that this is a number type so cannot reassign to a diffe
 let multiType: number | boolean
 multiType = true
 multiType = 20
+
+
