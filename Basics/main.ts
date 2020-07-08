@@ -57,3 +57,22 @@ randomValue = 'Charlotte'
 
 let unknownVal: unknown = 'hi'; // have to add ; here
 (unknownVal as string).toUpperCase()
+console.log(unknownVal)
+
+
+// TS type inference 
+
+let a // can now assign any type value after this
+a = true
+a = 'string'
+
+let b = 10 // TS infers that this is a number type so cannot reassign to a differnt type
+
+
+// union of types for same variable
+// useful if a value is not under your control e.g. from API
+// useful for intellisense support
+
+let multiType: number | boolean
+multiType = true
+multiType = 20

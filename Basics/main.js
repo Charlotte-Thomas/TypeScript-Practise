@@ -43,3 +43,15 @@ randomValue = 'Charlotte';
 // have to assert the type before doing so
 var unknownVal = 'hi'; // have to add ; here
 unknownVal.toUpperCase();
+console.log(unknownVal);
+// TS type inference 
+var a; // can now assign any type value after this
+a = true;
+a = 'string';
+var b = 10; // TS infers that this is a number type so cannot reassign to a differnt type
+// union of types for same variable
+// useful if a value is not under your control e.g. from API
+// useful for intellisense support
+var multiType;
+multiType = true;
+multiType = 20;
