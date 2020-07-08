@@ -23,3 +23,31 @@ function divide(num1: number, num2: number = 5): number {
   return num1 / num2
 }
 divide(10)
+
+
+
+// objects
+
+function fullName(person: {firstName: string, lastName: string}) {
+  console.log(`${person.firstName} ${person.lastName}`)
+}
+
+let p = {
+  firstName: 'Bruce',
+  lastName: 'Wayne'
+}
+
+fullName(p)
+
+// interfaces helps us when we need to use the same address object as its parameter
+
+interface Person {
+  firstName: string,
+  lastName?: string // made this optional
+}
+
+function nameAgain(person: Person) {
+  console.log(`${person.firstName} ${person.lastName}`)
+}
+
+nameAgain(p)

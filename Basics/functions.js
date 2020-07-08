@@ -20,3 +20,16 @@ function divide(num1, num2) {
     return num1 / num2;
 }
 divide(10);
+// objects
+function fullName(person) {
+    console.log(person.firstName + " " + person.lastName);
+}
+var p = {
+    firstName: 'Bruce',
+    lastName: 'Wayne'
+};
+fullName(p);
+function nameAgain(person) {
+    console.log(person.firstName + " " + person.lastName);
+}
+nameAgain(p);
