@@ -1,4 +1,17 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 exports.__esModule = true;
 // by assigning types we can't pass in other types
 // can add : number after the params, to state what the return type value should be (otherwise TS will infer it itself)
@@ -33,3 +46,31 @@ function nameAgain(person) {
     console.log(person.firstName + " " + person.lastName);
 }
 nameAgain(p);
+// classes
+var Employee = /** @class */ (function () {
+    function Employee(name) {
+        this.employeeName = name;
+    }
+    Employee.prototype.greet = function () {
+        console.log("Good morning " + this.employeeName);
+    };
+    return Employee;
+}());
+var emp1 = new Employee('Charlotte');
+console.log(emp1.employeeName);
+emp1.greet();
+// class inheritance 
+var Manager = /** @class */ (function (_super) {
+    __extends(Manager, _super);
+    function Manager(managerName) {
+        return _super.call(this, managerName) || this;
+    }
+    Manager.prototype.delegateWork = function () {
+        console.log("Manager delegatign tasks");
+    };
+    return Manager;
+}(Employee));
+var m1 = new Manager('Jerry');
+m1.delegateWork();
+m1.greet(); // have access to all Employee class methods too
+console.log(m1.employeeName);

@@ -1,4 +1,4 @@
-export {}
+export { }
 
 // by assigning types we can't pass in other types
 // can add : number after the params, to state what the return type value should be (otherwise TS will infer it itself)
@@ -28,7 +28,7 @@ divide(10)
 
 // objects
 
-function fullName(person: {firstName: string, lastName: string}) {
+function fullName(person: { firstName: string, lastName: string }) {
   console.log(`${person.firstName} ${person.lastName}`)
 }
 
@@ -51,3 +51,37 @@ function nameAgain(person: Person) {
 }
 
 nameAgain(p)
+
+
+// classes
+
+class Employee {
+  employeeName: string
+  constructor(name: string) {
+    this.employeeName = name
+  }
+
+  greet() {
+    console.log(`Good morning ${this.employeeName}`)
+  }
+}
+
+let emp1 = new Employee('Charlotte')
+console.log(emp1.employeeName)
+emp1.greet()
+
+// class inheritance 
+
+class Manager extends Employee {
+  constructor(managerName: string) {
+    super(managerName)
+  }
+  delegateWork() {
+    console.log(`Manager delegatign tasks`)
+  }
+}
+
+let m1 = new Manager('Jerry')
+m1.delegateWork()
+m1.greet() // have access to all Employee class methods too
+console.log(m1.employeeName)
