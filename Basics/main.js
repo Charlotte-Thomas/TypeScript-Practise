@@ -17,3 +17,9 @@ var u = undefined;
 // so can assign null / undefined to Boolean, number or string variable
 var isNew = null;
 var myName = undefined;
+// arrays
+// both options are fine to use - it's personal preference
+var array1 = [1, 2, 3];
+var array2 = [1, 2, 3];
+// tuples allow you to state an array of mixed types but fixed number of elements
+var mixed = ['hello', 1];

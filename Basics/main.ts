@@ -27,3 +27,12 @@ let u: undefined = undefined
 
 let isNew: Boolean = null
 let myName: string = undefined
+
+// arrays
+// both options are fine to use - it's personal preference
+
+let array1: number[] = [1,2,3]
+let array2: Array<number> = [1,2,3]
+
+// tuples allow you to state an array of mixed types but fixed number of elements
+let mixed: [string, number] = ['hello', 1]
