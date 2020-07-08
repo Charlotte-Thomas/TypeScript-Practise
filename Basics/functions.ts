@@ -85,3 +85,37 @@ let m1 = new Manager('Jerry')
 m1.delegateWork()
 m1.greet() // have access to all Employee class methods too
 console.log(m1.employeeName)
+
+
+// access modifiers (public, private, protected)
+// public means it can be accessed anywhere outside of the class
+// if you declare a class member as private it cannot be accessed outside its containing class
+// cannot access the member in a derived / inherited class either - like the Manager one if private
+// if you want derived classes to have access then use: protected
+
+class Car {
+  private colour: string // so can be accessed in the method below but not outside this scope
+  protected type: string // can be accessed by derived classes
+
+  constructor(colour: string, type: string) {
+    this.colour = colour
+    this.type = type
+  }
+  
+  carColour() {
+    console.log(`This cars colour is ${this.colour}`)
+  }
+}
+
+class Volvo extends Car {
+  constructor(colour: string, type: string) {
+    super(colour, type)
+  }
+  info() {
+    console.log(`Car type is ${this.type}`) // can access type
+  }
+}
+
+let car1 = new Volvo('green', 'Sports')
+car1.carColour()
+car1.info()
