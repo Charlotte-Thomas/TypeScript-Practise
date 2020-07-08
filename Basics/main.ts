@@ -17,3 +17,13 @@ console.log(sentence)
 
 // TS will help by only showing intellisense related to the TYPE 
 // e.g. writing name.  will give options related to string
+
+
+let n: null = null
+let u: undefined = undefined
+
+// in TS null and undefined are SUBTYPES of all other types
+// so can assign null / undefined to Boolean, number or string variable
+
+let isNew: Boolean = null
+let myName: string = undefined
