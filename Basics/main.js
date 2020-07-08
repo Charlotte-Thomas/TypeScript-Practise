@@ -33,3 +33,13 @@ var Color;
 })(Color || (Color = {})); // auto starts at 0 unless you specify a number (I added 5)
 var c = Color.Green;
 console.log(c); // = 6
+// any type
+// allows you to access functions / properties on the value even if it's not of the correct type without throwing errors (until runtime)
+var randomValue = 10;
+randomValue = true;
+randomValue = 'Charlotte';
+// unknown type
+// similar to any type but can't access properties off this type or call them
+// have to assert the type before doing so
+var unknownVal = 'hi'; // have to add ; here
+unknownVal.toUpperCase();

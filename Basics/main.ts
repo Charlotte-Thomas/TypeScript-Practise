@@ -44,3 +44,16 @@ enum Color {Red = 5, Green, Blue} // auto starts at 0 unless you specify a numbe
 
 let c: Color = Color.Green
 console.log(c) // = 6
+
+// any type
+// allows you to access functions / properties on the value even if it's not of the correct type without throwing errors (until runtime)
+let randomValue: any = 10
+randomValue = true
+randomValue = 'Charlotte'
+
+// unknown type
+// similar to any type but can't access properties off this type or call them
+// have to assert the type before doing so
+
+let unknownVal: unknown = 'hi'; // have to add ; here
+(unknownVal as string).toUpperCase()
