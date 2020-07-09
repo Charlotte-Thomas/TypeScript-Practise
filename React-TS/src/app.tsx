@@ -1,12 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import * as React from "react";
+import * as ReactDOM from "react-dom"; // have to do imports this way rather than: import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import './style.scss'
 
 import Home from './components/Home'
 
 const App = () => (
-  <BrowserRouter basename="/TS">
+  <BrowserRouter basename="/">
     <Switch>
       <Route exact path="/" component={Home} />
     </Switch>
