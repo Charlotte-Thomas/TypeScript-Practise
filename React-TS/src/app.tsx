@@ -8,7 +8,8 @@ import Home from './components/Home'
 const App = () => (
   <BrowserRouter basename="/">
     <Switch>
-      <Route exact path="/" component={Home} />
+      {/* <Route exact path="/" compiler="TypeScript" framework="React" component={Home} /> */}
+      <Route exact path="/" render={(props) => <Home compiler="TypeScript" framework="React" />} />
     </Switch>
   </BrowserRouter>
 )
