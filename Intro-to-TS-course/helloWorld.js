@@ -2,7 +2,7 @@
 exports.__esModule = true;
 console.log('hello world');
 function hello(str) {
-    console.log('hello' + str);
+    console.log('hello ' + str);
 }
 hello('charlotte');
 var Names;
@@ -17,3 +17,9 @@ console.log(hasLamb);
 function getName() {
     console.log('i have no return');
 }
+function printName(stark) {
+    console.log(stark.name);
+}
+printName({ name: 'Arya' });
+//printName({label: 'Jon'}) --- this throwså an error but without interface it wouldn't have thrown onw
+// classes 
