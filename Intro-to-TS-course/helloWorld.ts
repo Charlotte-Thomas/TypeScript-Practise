@@ -56,3 +56,32 @@ const apple = new Fruit('don\'t eat if given by witch')
 console.log(Fruit.bowl) // can only access static values from the class itself this way
 
 apple.hello('apple')
+
+
+// inheritance 
+
+class Person {
+  name: string
+  constructor(name: string) {
+    this.name = name
+  }
+  dance() {
+    console.log(this.name, 'is dancing')
+  }
+}
+
+const bran = new Person('bran')
+
+bran.dance()
+
+
+class AwesomePerson extends Person {
+  dance() {
+    console.log('so awesome')
+    super.dance() // calls originl dance func
+  }
+}
+
+const Jerry = new AwesomePerson('Jerry')
+
+Jerry.dance() // new dance function overrides Person dance func unless you use super inside
