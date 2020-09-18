@@ -35,5 +35,24 @@ printName({name: 'Arya'})
 
 // classes 
 
+class Fruit {
+  fruits: boolean = true // this is a default propery 
+  static bowl: string = 'kitchen'
+  name: string
+  location: string
+  description: string
+  constructor(desc: string){
+    this.description = desc
+    this.location = Fruit.bowl // can use static values like this
+  }
 
+  hello(fruity: string) {
+    console.log('hello ' + fruity)
+  }
+}
 
+const apple = new Fruit('don\'t eat if given by witch')
+
+console.log(Fruit.bowl) // can only access static values from the class itself this way
+
+apple.hello('apple')

@@ -23,3 +23,18 @@ function printName(stark) {
 printName({ name: 'Arya' });
 //printName({label: 'Jon'}) --- this throwså an error but without interface it wouldn't have thrown onw
 // classes 
+var Fruit = /** @class */ (function () {
+    function Fruit(desc) {
+        this.fruits = true; // this is a default propery 
+        this.description = desc;
+        this.location = Fruit.bowl; // can use static values like this
+    }
+    Fruit.prototype.hello = function (fruity) {
+        console.log('hello ' + fruity);
+    };
+    Fruit.bowl = 'kitchen';
+    return Fruit;
+}());
+var apple = new Fruit('don\'t eat if given by witch');
+console.log(Fruit.bowl); // can only access static values from the class itself this way
+apple.hello('apple');
