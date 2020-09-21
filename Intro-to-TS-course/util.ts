@@ -1,5 +1,8 @@
 /// <reference path="modules.ts" />
 //links to modules.ts
+// if you press cmd + the path it will take you to the file!
+// if you press cmd + the 'Utility' or 'useful' it will take you to the specific spot in the file it exists!
+// press cmd and hiver over these words and you can see how they were defined in the other file
 
 const use = new Utility.useful()
 
